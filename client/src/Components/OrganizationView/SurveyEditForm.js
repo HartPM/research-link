@@ -49,33 +49,39 @@ function SurveyEditForm({props}) {
     }
 
     return ( 
-        <form onSubmit={handleSubmit} >
-            <h2>Title</h2>
-                <input 
-                    value={title}
-                    onChange={e => setTitle(e.target.value)}
-                />
-            <br/>
-            <h3>
-                Questions
-            </h3>
-            {inputs.map((question, i) => {
-                return (
-                    <div key={i} id={`survey-div-${i}`}>
-                        <label> {i + 1}:
-                            <input 
-                                value={inputs[i]}
-                                onChange={(e) => handleChange(e, i)}
-                            />
-                        </label>
-                        <button id={i} onClick={handleDelete}>Remove</button>
+        <div className="content2">
+            <form className="form1" onSubmit={handleSubmit} >
+                <h2>Title</h2>
+                    <div>
+                        <input 
+                            className="form-input2"
+                            value={title}
+                            onChange={e => setTitle(e.target.value)}
+                        />
                     </div>
-            )})}
-            <br/>
-            <button type='submit'>
-                Save
-            </button>
-        </form>
+                <br/>
+                <h3>
+                    Questions
+                </h3>
+                {inputs.map((question, i) => {
+                    return (
+                        <div key={i} id={`survey-div-${i}`}>
+                            <label className="form-label"> {i + 1}:
+                                <textarea
+                                    className="form1-input2" 
+                                    value={inputs[i]}
+                                    onChange={(e) => handleChange(e, i)}
+                                />
+                            </label>
+                            <button id={i} onClick={handleDelete}>Remove</button>
+                        </div>
+                )})}
+                <br/>
+                <button type='submit'>
+                    Save
+                </button>
+            </form>
+        </div>
     )
 }
 

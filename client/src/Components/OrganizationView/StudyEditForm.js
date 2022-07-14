@@ -56,65 +56,74 @@ function StudyEditForm () {
                 :
                     <>
                         <header>Edit Study</header>
-                        <form onSubmit={handleSubmit}>
-                            <div>
-                                <label>Title:
-                                    <input
-                                    type='text'
-                                    name='title'
-                                    value={trial.title}
-                                    onChange={handleChange}
-                                    >
-                                    </input>
-                                </label>
-                            </div>
-                            <div>
-                                <label>Description:
-                                    <input
-                                    type='text'
-                                    name='description'
-                                    value={trial.description}
-                                    onChange={handleChange}
-                                    >
-                                    </input>
-                                </label>
-                            </div>
-                            <div>
-                                <label>City:
-                                    <input
-                                    type='text'
-                                    name='city'
-                                    value={trial.city}
-                                    onChange={handleChange}
-                                    >
-                                    </input>
-                                </label>
-                            </div>
-                            <div>
-                                <label>State:
-                                    <input
-                                    type='text'
-                                    name='state'
-                                    value={trial.state}
-                                    onChange={handleChange}
-                                    >
-                                    </input>
-                                </label>
-                            </div>
-                            <div>
-                                <label>Total Participants Needed:
-                                    <input
-                                    type='number'
-                                    name='count'
-                                    value={trial.count}
-                                    onChange={handleChange}
-                                    >
-                                    </input>
-                                </label>
-                            </div>
-                            <br/>
-                            <button type='submit'>Update</button>
-                        </form>
+                        <main>
+                            <div className="content2">
+                                <form className="form1" onSubmit={handleSubmit}>
+                                    <div>
+                                        <label className="form-label">Title:
+                                            <input
+                                            className="form1-input1"
+                                            type='text'
+                                            name='title'
+                                            value={trial.title}
+                                            onChange={handleChange}
+                                            >
+                                            </input>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label className="form-label">Description:
+                                            <textarea
+                                            className="form1-input2"
+                                            type='text'
+                                            name='description'
+                                            value={trial.description}
+                                            onChange={handleChange}
+                                            >
+                                            </textarea>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label className="form-label">City:
+                                            <input
+                                            className="form1-input1"
+                                            type='text'
+                                            name='city'
+                                            value={trial.city}
+                                            onChange={handleChange}
+                                            >
+                                            </input>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label className="form-label">State:
+                                            <input
+                                            className="form1-input1"
+                                            type='text'
+                                            name='state'
+                                            value={trial.state}
+                                            onChange={handleChange}
+                                            >
+                                            </input>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label className="form-label">Participants Needed:
+                                            <input
+                                            className="form1-input1"
+                                            type='number'
+                                            name='count'
+                                            value={trial.count}
+                                            onChange={handleChange}
+                                            >
+                                            </input>
+                                        </label>
+                                    </div>
+                                    <br/>
+                                    <button type='submit'>Update</button>
+                                </form>
+                        </div>
+                        </main>
                     </>
             }
         </>
