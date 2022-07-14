@@ -43,6 +43,7 @@ header {
   color: white;
   padding: 0.7rem;
   background: linear-gradient(#0A58BF ,#687DA6);
+  border-radius: 1px;
 }
 
 button {
@@ -72,6 +73,22 @@ th {
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.study-card {
+  list-style: none;
+  border: solid 1px #687DA6;
+  border-radius: 3px;
+  padding: 0.5rem;
+  margin: 5px;
+  margin-right: 3rem;
+}
+
+.study-card:hover {
+  box-shadow: 1px 1px 3px #687DA6;
+  padding: 0.55rem;
 }
 
 

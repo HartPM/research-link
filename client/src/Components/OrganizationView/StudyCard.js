@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 function StudyCard({ trial }) {
 
     return (
-        <li>
+        <li className="study-card">
             <Link to={`/organization/studies/${trial.id}`} className='studyLink'>
                 <div>
-                    <h5>{trial.title}</h5>
+                    <h3>{trial.title}</h3>
                 </div>
                 <div>
                     <p>{trial.description.slice(0,150)}...</p>
