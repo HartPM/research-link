@@ -18,7 +18,8 @@ function SurveyCard({ questions, surveyId, user}) {
         return (
             <div key={i}>
                 <p>{questions[i]}</p>
-                <input 
+                <textarea 
+                    className="form1-input1"
                     value={inputs[i]}
                     onChange={(e) => handleChange(e, i)}
                 />
@@ -54,8 +55,7 @@ function SurveyCard({ questions, surveyId, user}) {
 
     return (
         <>
-            {/* { confirmation ? <h3>{confirmation}</h3> :  */}
-            <form onSubmit={handleSubmit}>
+            <form className="form1" onSubmit={handleSubmit}>
                 { manyInputs }
                 <br />
                 <button type='submit'>Submit</button>

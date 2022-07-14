@@ -17,12 +17,12 @@ function Survey({user}) {
     if (survey) {
     return (
         <>
-        <main>{survey.title}</main>
-        <div className='content1'>
-        </div>
-        <div className='content2'>
-            { <SurveyCard questions={survey.questions} surveyId={survey.id} user={user} /> }
-        </div>
+            <header>{survey.title}</header>
+            <main>
+                <div className='content2'>
+                    { <SurveyCard questions={survey.questions} surveyId={survey.id} user={user} /> }
+                </div>
+            </main>
         </>
     )} else {
         return <p>Loading...</p>
