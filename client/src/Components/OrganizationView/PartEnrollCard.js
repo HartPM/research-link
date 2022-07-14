@@ -25,17 +25,21 @@ function PartEnrollCard() {
         <>
         { 
             deleted ?
+                <>
+                <header>Participant Info</header>
                 <main>
-                    <header>Participant Info</header>
-                    <div className='content1'>
+                    <div className='tools'>
                         <button onClick={handleCancel}>Cancel Enrollment</button>
                     </div>
-                    <h1>{participant.first_name} {participant.last_name}</h1>
-                    <h2>{participant.sex}</h2>
-                    <h2>{participant.format_dob}</h2>
-                    <h2>{participant.city}, {participant.state}</h2>
-                    <h2>{participant.email}</h2>
+                    <div className='content2'>
+                        <h1>{participant.first_name} {participant.last_name}</h1>
+                        <h2>{participant.sex}</h2>
+                        <h2>{participant.format_dob}</h2>
+                        <h2>{participant.city}, {participant.state}</h2>
+                        <h2>{participant.email}</h2>
+                    </div>
                 </main> 
+                </>
             : 
                 <Redirect to={`/organization/studies/${trial_id}`} />
         }

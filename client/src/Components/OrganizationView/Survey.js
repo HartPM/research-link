@@ -31,8 +31,10 @@ function Survey({user}) {
 
     return (
         survey && survey.questions ?
+        <>
+        <header>{survey.title}</header>
         <main>
-            <header>{survey.title}</header>
+            <div className="tools">
             { 
                 toggleEdit ? 
                     <button onClick={handleClickEdit}>
@@ -48,12 +50,13 @@ function Survey({user}) {
                     </button>
                 </>  
             }
+            </div>
             
             { 
                 toggleEdit ? 
                     <SurveyEditForm props={props} /> 
                 :
-                    <>
+                    <div className="content2">
                         <h2>Questions</h2>
                         <ol>
                             {inputs.map((question, i) => {
@@ -79,9 +82,10 @@ function Survey({user}) {
                         <h3>
                             Created: {survey.format_created_at}
                         </h3>
-                    </> 
+                    </div> 
             }
         </main> 
+        </>
         : <p>Loading...</p>
     )
 }
