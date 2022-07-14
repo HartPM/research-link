@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route, Redirect, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import SignOut from '../SignOut';
 import Profile from './Profile';
@@ -34,7 +34,7 @@ function ParticipantViews({user, onLogout}) {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <SignOut onLogout={onLogout} />
+                    <SignOut onLogout={onLogout}/>
                 </li>
           </ul>                                  
         </nav>

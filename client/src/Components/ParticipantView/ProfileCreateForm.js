@@ -44,60 +44,78 @@ function ProfileCreateForm({ user }) {
     
     return (
         <>
-        <main>Create a profile</main>
-        <div className="content1"></div>
-        <div className="content2">
-            <form onSubmit={handleSubmit}>
-                <label> First name
-                    <input
-                        type="text"
-                        placeholder="First Name"
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
-                    />
-                </label>
-                <label> Last name
-                    <input
-                        type="text"
-                        placeholder="Last Name"
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
-                    />
-                </label>
-                <label> Sex
-                    <select onChange={(e) => setSex(e.target.value)}>
-                        <option></option>
-                        <option value="Female">Female</option>
-                        <option value="Male">Male</option>
-                    </select>
-                </label>
-                <label> Date of Birth
-                    <input 
-                    type="date" 
-                    value={dob} 
-                    onChange={(e) => setDob(e.target.value)} 
-                    />
-                </label>
-                <label>City
-                    <input
-                        type="text"
-                        placeholder="City"
-                        value={city}
-                        onChange={(e) => setCity(e.target.value)}
-                    />
-                </label>
-                <label>State
-                    <input
-                        type="text"
-                        placeholder="State"
-                        value={state}
-                        onChange={(e) => setState(e.target.value)}
-                    />
-                </label>
+        <header>Create a profile</header>
+        <main>
+            <div className="content2">
+            <form className="form1" onSubmit={handleSubmit}>
+                <div>
+                    <label className="form-label"> First name
+                        <input
+                            className="form1-input1"
+                            type="text"
+                            placeholder="First Name"
+                            value={firstName}
+                            onChange={(e) => setFirstName(e.target.value)}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label className="form-label"> Last name
+                        <input
+                            className="form1-input1"
+                            type="text"
+                            placeholder="Last Name"
+                            value={lastName}
+                            onChange={(e) => setLastName(e.target.value)}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label className="form-label"> Sex
+                        <select className="form1-input1" onChange={(e) => setSex(e.target.value)}>
+                            <option></option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label className="form-label"> Date of Birth
+                        <input 
+                        className="form1-input1"
+                        type="date" 
+                        value={dob} 
+                        onChange={(e) => setDob(e.target.value)} 
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label className="form-label">City
+                        <input
+                            className="form1-input1"
+                            type="text"
+                            placeholder="City"
+                            value={city}
+                            onChange={(e) => setCity(e.target.value)}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label className="form-label">State
+                        <input
+                            className="form1-input1"
+                            type="text"
+                            placeholder="State"
+                            value={state}
+                            onChange={(e) => setState(e.target.value)}
+                        />
+                    </label>
+                </div>
                 <button type="submit">Create Profile</button>
             </form>
+            </div>
             { errors ? <p>Incorrect email or password</p> : null }
-        </div>
+        </main>
         </>
     )
 }
