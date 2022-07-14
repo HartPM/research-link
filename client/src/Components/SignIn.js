@@ -27,33 +27,43 @@ function SignIn({ onLogin }) {
     }
 
     return (
+        <>
+        <header>Research Link</header>
         <main>
-            <form onSubmit={handleSubmit}>
-                <h1>
-                    Sign in
-                </h1>
-                <input
-                    type="email"
-                    placeholder="email"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
+            <div className="content2">
+                <form onSubmit={handleSubmit}>
+                    <h1>
+                        Sign in
+                    </h1>
+                    <div>
+                        <input
+                            className="form1-input3"
+                            type="email"
+                            placeholder="email"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <input
+                            className="form1-input3"
+                            type="password"
+                            placeholder="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <br/>
+                    <button type="submit">Sign in</button>
+                </form>
+                { errors ? <p>Incorrect email or password</p> : null }
                 <br/>
-                <input
-                    type="password"
-                    placeholder="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <br/>
-                <button type="submit">Sign in</button>
-            </form>
-            { errors ? <p>Incorrect email or password</p> : null }
-            <br/>
-            <Link to="/signup">
-                {"Don't have an account? Sign Up"}
-            </Link>
+                <Link to="/signup">
+                    {"Don't have an account? Sign Up"}
+                </Link>
+            </div>
         </main>
+        </>
     )
 }
 

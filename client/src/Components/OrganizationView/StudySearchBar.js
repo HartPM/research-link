@@ -11,6 +11,7 @@ function StudySearchBar({search}) {
     return (
       <>
         <input
+          className="search-bar"
           type="text"
           placeholder="Search for a study"
           value={searchText}
