@@ -30,28 +30,32 @@ function Studies({ user }) {
     }
 
     return (
+        <>
+        <header>
+            Studies
+        </header>
         <main>
-            <header>
-                Studies
-            </header>
-            <Link to={'/organization/studies/new'}>
-                <button>New Study</button>
-            </Link>
-            <br/>
-            <StudySearchBar search={search} />  
-            <br/>
-            <label> Filter
-                <select type="dropdown" onChange={e => setDd(e.target.value)}>
-                    <option></option>
-                    <option value='participants'>Participants needed</option>
-                    <option value='full'>Fully enrolled</option>
-                </select>
-            </label>
+            <div className="tools">
+                <Link to={'/organization/studies/new'}>
+                    <button>New Study</button>
+                </Link>
+                <br/>
+                <StudySearchBar search={search} />  
+                <br/>
+                <label> Filter
+                    <select type="dropdown" onChange={e => setDd(e.target.value)}>
+                        <option></option>
+                        <option value='participants'>Participants needed</option>
+                        <option value='full'>Fully enrolled</option>
+                    </select>
+                </label>
+            </div>
             <br/>
             <ul>
                 {filteredResults.map(trial => <StudyCard key={trial.id} trial={trial} />)}
             </ul>
         </main>
+        </>
     )
 }
 
