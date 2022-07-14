@@ -22,15 +22,15 @@ function Studies() {
 
     return (
         <>
-            <main>Current Research Studies</main>
-            <div className='content2'>
-                <br />
+            <header>Current Research Studies</header>
+            <main>
+                <div className="tools">
                 <StudySearchBar search={search} />
-                <br/>
+                </div>
                 <ul>
                     {searchFilter.map(trial => <StudyCard key={trial.id} trial={trial} />)}
                 </ul>
-            </div>
+            </main>
         </>
     )
 }

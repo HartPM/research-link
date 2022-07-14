@@ -9,11 +9,17 @@ function Profile({ user }) {
         <>
             { !!user.participant ? 
             <>
-                <div className='content2'>
-                    <ProfileCard user={user} />
-                    <EnrolledTrials user={user} />
-                    <SurveyedTrials user={user} />
-                </div> 
+                <header>Profile</header>
+                <main>
+                    <div className='content2'>
+                        <ProfileCard user={user} />
+                        <br/>
+                        <br/>
+                        <EnrolledTrials user={user} />
+                        <br/>
+                        <SurveyedTrials user={user} />
+                    </div> 
+                </main>
             </>
             : <Redirect to='/participant/profile/new' /> }
         </>

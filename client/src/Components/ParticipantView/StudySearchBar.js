@@ -10,14 +10,13 @@ function StudySearchBar({search}) {
   
     return (
       <>
-      <label>{'search: '}
         <input
+          className="search-bar"
           type="text"
           placeholder="Search for a study"
           value={searchText}
           onChange={e => setSearchText(e.target.value)}
         />
-        </label>
       </>
     );
 }

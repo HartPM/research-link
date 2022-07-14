@@ -5,13 +5,12 @@ function ProfileCard({ user }) {
 
     return (
         <>
-            <main>My Profile</main>
             <div className='content2'>
-                <h3>{participant.first_name} {participant.last_name}</h3>
-                <h5>{participant.sex}</h5>
-                <h5>{participant.format_dob}</h5>
-                <h5>{participant.city}, {participant.state}</h5>
-                <h5>{participant.email}</h5>
+                <h1>{participant.first_name} {participant.last_name}</h1>
+                <h3>{participant.sex}</h3>
+                <h3>{participant.format_dob}</h3>
+                <h3>{participant.city}, {participant.state}</h3>
+                <h3>{participant.email}</h3>
             </div>
         </>
     )

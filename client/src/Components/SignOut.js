@@ -1,10 +1,8 @@
 function SignOut({ onLogout }) {
 
     function handleLogout() {
-        fetch("/logout", {
-          method: "DELETE",
-        }).then(() => onLogout());
-      }
+      onLogout();
+    }
 
     return (
       <div className='nav-link'>
