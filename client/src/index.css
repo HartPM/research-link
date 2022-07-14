@@ -91,6 +91,23 @@ th {
   padding: 0.55rem;
 }
 
+.content1-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1)) , url("https://images.unsplash.com/photo-1606206873764-fd15e242df52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  min-height: 15rem;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  padding: 5rem;
+  font-size: 1.5rem;
+  margin-top: .6rem;
+}
+
+.home-text {
+  font-size: 1.4rem;
+}
+
 
 /* NAVBAR______________________________________________ */
 
