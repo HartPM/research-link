@@ -33,46 +33,60 @@ function SignUp({ onLogin }){
     }
 
     return (
+        <>
+        <header>Research Link</header>
         <main>
-            <form onSubmit={handleSubmit}>
-                <h4>Sign up</h4>
-                <input
-                    type="email"
-                    placeholder="email"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
+            <div className="content2">
+                <form onSubmit={handleSubmit}>
+                    <h1>
+                        Sign up
+                    </h1>
+                    <div>
+                        <input
+                            className="form1-input3"
+                            type="email"
+                            placeholder="email"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                    </div>
+                    <div>
+                        <input
+                            className="form1-input3"
+                            type="password"
+                            placeholder="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <div className="sign-up-checkbox">
+                        <label>
+                            <input
+                                type="checkbox"
+                                value={admin}
+                                onChange={(e) => setAdmin(!admin)}
+                            />
+                            I am creating an account for my organization.
+                        </label>
+                    </div>
+                    <br/>
+                    <button type="submit">Sign up</button>
+                </form>
                 <br/>
-                <input
-                    type="password"
-                    placeholder="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <br/>
-                <label>
-                    <input
-                        type="checkbox"
-                        value={admin}
-                        onChange={(e) => setAdmin(!admin)}
-                    />
-                    I am creating an account for my organization.
-                </label>
-                <button type="submit">Sign up</button>
-            </form>
-            <br/>
-            { 
-                errors ? 
-                <p>
-                    Incorrect email or password
-                </p> 
-                : 
-                null 
-            }
-            <Link to="/signin">
-                {"Already have an account? Sign in"}
-            </Link>
+                { 
+                    errors ? 
+                    <p>
+                        Incorrect email or password
+                    </p> 
+                    : 
+                    null 
+                }
+                <Link to="/signin">
+                    {"Already have an account? Sign in"}
+                </Link>
+            </div>
         </main>
+        </>
     )
 }
 
