@@ -25,17 +25,18 @@ function Registry () {
     }
 
     return (
+        <>
+        <header>Applicant Registry</header>
         <main>
-            <header>Applicant Registry</header>
             <table>
                 <thead>
                 <tr>
-                    <th><button className='tSort' onClick={() => setSortedField('last_name')}>Last</button></th> 
-                    <th><button className='tSort' onClick={() => setSortedField('first_name')}>First</button></th>
-                    <th><button className='tSort' onClick={() => setSortedField('sex')}>Sex</button></th>
-                    <th><button className='tSort' onClick={() => setSortedField('age')}>Age</button></th>
-                    <th><button className='tSort' onClick={() => setSortedField('state')}>Location</button></th>
-                    <th><button className='tSort' onClick={() => setSortedField('email')}>Email</button></th>
+                    <th><button className='t-sort' onClick={() => setSortedField('last_name')}>Last &#9660;</button></th> 
+                    <th><button className='t-sort' onClick={() => setSortedField('first_name')}>First &#9660;</button></th>
+                    <th><button className='t-sort' onClick={() => setSortedField('sex')}>Sex &#9660;</button></th>
+                    <th><button className='t-sort' onClick={() => setSortedField('age')}>Age &#9660;</button></th>
+                    <th><button className='t-sort' onClick={() => setSortedField('state')}>Location &#9660;</button></th>
+                    <th><button className='t-sort' onClick={() => setSortedField('email')}>Email &#9660;</button></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -43,6 +44,7 @@ function Registry () {
                 </tbody>
             </table>
         </main>
+        </>
     )
 }
 
