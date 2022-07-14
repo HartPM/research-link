@@ -38,7 +38,7 @@ main {
 }
 
 header {
-  font-size: 3rem;
+  font-size: 2.3rem;
   text-align: center;
   color: white;
   padding: 0.7rem;
@@ -175,21 +175,14 @@ tr:nth-child(odd) {
   color: white;
 }
 
-.link-text {
-  display: none;
-  margin-left: 1rem;
-}
-
-.link-text:hover {
-  display: right;
-  margin-left: 1rem;
-  cursor: pointer;
-}
-
 .nav-link svg {
   width: 2rem;
   min-width: 2rem;
   margin: 0 1.5rem;
+}
+
+.link-text {
+  display: none;
 }
 
 .fa-primary {
@@ -221,6 +214,12 @@ tr:nth-child(odd) {
   {
     left: 0px;
   }
+  
+  .link-text:hover {
+    display: right;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
 
   .nav-item:last-child {
     margin-top: auto;
@@ -241,6 +240,10 @@ tr:nth-child(odd) {
 
   .nav-link {
     justify-content: center;
+  }
+
+  .link-text:hover {
+    display: none;
   }
 
   main {

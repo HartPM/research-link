@@ -11,7 +11,7 @@ function EnrolledTrialCard ({ trialId }) {
       }, []);
 
     return (
-        <h5>{trial.title}</h5>
+        <h4>{trial.title}</h4>
     )
 }
 

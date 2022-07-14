@@ -12,10 +12,10 @@ function SurveyedTrials({ user }) {
       }, []);
     
     return (
-        <>
+        <div className="content2">
             <h2>Surveyed Trials</h2>
             { trials ? trials.map(trial => <SurveyedTrialCard key={trial.id} trial={trial}/>) : null}
-        </>
+        </div>
     )
 }
 
