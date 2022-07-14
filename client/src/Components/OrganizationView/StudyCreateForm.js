@@ -44,45 +44,62 @@ function StudyCreateForm({ user }) {
         <>
         <header>Create a new study</header>
         <main>
-            <form onSubmit={handleSubmit}>
-                <label>Title:
-                    <input
-                    type='text'
-                    onChange={e => setTitle(e.target.value)}
-                    >
-                    </input>
-                </label>
-                <label>Description:
-                    <input
-                    type='text'
-                    onChange={e => setDescription(e.target.value)}
-                    >
-                    </input>
-                </label>
-                <label>City:
-                    <input
-                    type='text'
-                    onChange={e => setCity(e.target.value)}
-                    >
-                    </input>
-                </label>
-                <label>State:
-                    <input
-                    type='text'
-                    onChange={e => setState(e.target.value)}
-                    >
-                    </input>
-                </label>
-                <label>Total Participants Needed:
-                    <input
-                    type='number'
-                    onChange={e => setCount(e.target.value)}
-                    >
-                    </input>
-                </label>
-                <br/>
-                <button type='submit'>Submit</button>
-            </form>
+            <div className="content2">
+                <form className="form1" onSubmit={handleSubmit}>
+                    <div>
+                        <label className="form-label">Title:
+                            <input
+                            className="form1-input1"
+                            type='text'
+                            onChange={e => setTitle(e.target.value)}
+                            >
+                            </input>
+                        </label>
+                    </div>
+                    <div>
+                        <label className="form-label">Description:
+                            <textarea
+                            className="form1-input2"
+                            type='text'
+                            onChange={e => setDescription(e.target.value)}
+                            >
+                            </textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <label className="form-label">City:
+                            <input
+                            className="form1-input1"
+                            type='text'
+                            onChange={e => setCity(e.target.value)}
+                            >
+                            </input>
+                        </label>
+                    </div>
+                    <div>
+                        <label className="form-label">State:
+                            <input
+                            className="form1-input1"
+                            type='text'
+                            onChange={e => setState(e.target.value)}
+                            >
+                            </input>
+                        </label>
+                    </div>
+                    <div>
+                        <label className="form-label">Total Participants Needed:
+                            <input
+                            className="form1-input1"
+                            type='number'
+                            onChange={e => setCount(e.target.value)}
+                            >
+                            </input>
+                        </label>
+                    </div>
+                    <br/>
+                    <button type='submit'>Submit</button>
+                </form>
+            </div>
             { 
                 studyId ?
                     <Redirect to={`/organization/studies/${studyId}`} /> 

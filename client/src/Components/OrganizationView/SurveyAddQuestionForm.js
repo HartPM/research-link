@@ -25,11 +25,11 @@ function SurveyAddQuestionForm({ survey, setRender, render }) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input
+            <textarea
             placeholder='add a question'
             value={input}
             onChange={e => setInput(e.target.value)}
-            ></input>
+            ></textarea>
             <button type='submit'>Add</button>
         </form>
     )
