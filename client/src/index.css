@@ -60,13 +60,29 @@ button:hover {
 }
 
 table {
+  margin-top: .5rem;
+  margin-left: .5rem;
   border-bottom: 1px solid;
   width: 100%;
+  border-collapse: collapse;
 }
 
 th {
   text-align: left;
   border-bottom: 1px solid;
+  background: white;
+}
+
+.t-sort {
+  width: 100%;
+}
+
+td {
+  padding: 10px;  
+}
+
+tr:nth-child(odd) {
+  background: #cfdfff;
 }
 
 .tools {
