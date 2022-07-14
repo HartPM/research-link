@@ -41,8 +41,9 @@ function StudyCreateForm({ user }) {
     }
 
     return(
+        <>
+        <header>Create a new study</header>
         <main>
-            <header>Create a new study</header>
             <form onSubmit={handleSubmit}>
                 <label>Title:
                     <input
@@ -82,13 +83,13 @@ function StudyCreateForm({ user }) {
                 <br/>
                 <button type='submit'>Submit</button>
             </form>
-            
             { 
                 studyId ?
                     <Redirect to={`/organization/studies/${studyId}`} /> 
                 : null
             }
         </main>
+        </>
     )
 }
 

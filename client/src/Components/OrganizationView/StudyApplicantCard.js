@@ -51,22 +51,26 @@ function StudyApplicantCard() {
         <>
             {enrolled ? <Redirect to={`/organization/studies/${trialId}`} /> 
             :
+            <>
+            <header>Applicant Info</header>
             <main>
-                <header>
-                    Applicant Info
-                </header>
-                
-                <button onClick={handleEnroll}>Enroll Applicant</button>
-                <h1>{participant.first_name} {participant.last_name}</h1>
-                <h2>{participant.sex}</h2>
-                <h2>{participant.format_dob}</h2>
-                <h2>{participant.city}, {participant.state}</h2>
-                <h2>{participant.email}</h2>
-                { message && <h3>{message}</h3>}
-                <h1>Survey Response</h1>
-                { response ? response.answers.map((answer, i) => <h2 key={i}>{answer}</h2>) : null }
-                
+                <div className="tools">
+                    <button onClick={handleEnroll}>Enroll Applicant</button>
+                </div>
+                <div className="study-card">
+                    <h1>{participant.first_name} {participant.last_name}</h1>
+                    <h2>{participant.sex}</h2>
+                    <h2>{participant.format_dob}</h2>
+                    <h2>{participant.city}, {participant.state}</h2>
+                    <h2>{participant.email}</h2>
+                    { message && <h3>{message}</h3>}
+                </div>
+                <div className="content2">
+                    <h1>Survey Response</h1>
+                    { response ? response.answers.map((answer, i) => <h2 key={i}>{answer}</h2>) : null } 
+                </div>
             </main>
+            </>
             }
        </> 
     )

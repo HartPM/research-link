@@ -11,7 +11,7 @@ function StudyDetailsSurveyed ({survey, trialId}) {
     }, [survey]);
 
     return (
-        <table className="sortable">
+        <table>
         <thead>
           <tr>
             <th>Last</th>

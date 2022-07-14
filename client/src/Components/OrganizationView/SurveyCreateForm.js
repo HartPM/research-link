@@ -55,9 +55,9 @@ function SurveyCreateForm() {
     }
 
     return (
+        <>
+        <header>Create a survey</header>
         <main>
-            <header>Create a survey</header>
-
             <form onSubmit={handleSubmit} >
                 <h1>
                     Title
@@ -93,6 +93,7 @@ function SurveyCreateForm() {
             { error ? <h4>{error}</h4> : null }
             { toEdit ? <Redirect to={`/organization/studies/${trial}`} /> : null }
         </main>
+        </>
     )
 }
 

@@ -100,6 +100,7 @@ tr:nth-child(odd) {
   padding: 0.5rem;
   margin: 5px;
   margin-right: 3rem;
+  background: #cfdfff;
 }
 
 .study-card:hover {
@@ -122,6 +123,12 @@ tr:nth-child(odd) {
 
 .home-text {
   font-size: 1.4rem;
+}
+
+.content2{
+  margin: 5px;
+  margin-right: 3rem;
+  padding-left: 2.5rem;
 }
 
 
@@ -223,5 +230,6 @@ tr:nth-child(odd) {
   color: black;
 }
 
+/* FORMS______________________________________________ */
 
 
