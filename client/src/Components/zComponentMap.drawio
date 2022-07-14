@@ -1,0 +1,112 @@
+<mxfile host="65bd71144e">
+    <diagram id="pLVXaG9CedYQTY64REAk" name="Page-1">
+        <mxGraphModel dx="1033" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="App" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="10" width="1900" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="SignIn" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="SignUp&lt;br&gt;organization or volunteer?" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="HomePage" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="130" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7" target="56" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Profile" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Participant View" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="130" width="740" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Organization View" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1280" y="130" width="640" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="20" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Trials" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="21" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Notifications" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="950" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="SignOut" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="SignOut" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1800" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="EditProfileForm" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="270" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="25" target="52" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="TrialCard" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="460" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="NotificationCard" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="950" y="270" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Dashboard&lt;br&gt;view full trials&lt;br&gt;view trials in need of participants&lt;br&gt;add participants&lt;br&gt;remove participants" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1280" y="180" width="130" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=none;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="28" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="28" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="MyTrials" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="270" width="80" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="44" target="58">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="Actively enrolled" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="380" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="46" target="59">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="Surveyed" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="380" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Trial Details" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="CreateTrialForm" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1740" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="EditTrialForm" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1720" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="CreateProfileForm" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="270" width="110" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="Card" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="480" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Card" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="480" width="100" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,18 @@
+{
+    "name": "example-project",
+    "description": "Build scripts for Heroku",
+    "engines": {
+        "node": ">= 14"
+    },
+    "scripts": {
+        "build": "npm install --prefix client && npm run build --prefix client",
+        "clean": "rm -rf public",
+        "deploy": "cp -a client/build/. public/",
+        "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.1.1",
+        "@fortawesome/free-solid-svg-icons": "^6.1.1",
+        "@fortawesome/react-fontawesome": "^0.2.0"
+    }
+}
