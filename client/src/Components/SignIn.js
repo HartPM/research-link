@@ -6,6 +6,7 @@ function SignIn({ onLogin }) {
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState('');
     const [toggleIn, setToggleIn] = useState(false);
+    const [admin, setAdmin] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -19,8 +20,7 @@ function SignIn({ onLogin }) {
             .then(res => {
                 if (res.ok) {
                     res.json()
-                    .then((user) => onLogin(user))
-                    setToggleIn(!toggleIn)
+                    .then((user) => setAdmin(user.admin) & setToggleIn(!toggleIn) & onLogin(user))
                 } else {
                     res.json()
                     .then(obj => setErrors(obj.error))
@@ -31,9 +31,8 @@ function SignIn({ onLogin }) {
     return (
         <>
         { 
-        toggleIn ? 
-        <Redirect to='/participant'/> 
-        :
+        admin ? <Redirect to='/organization/' /> :
+        toggleIn ? <Redirect to='/participant/'/> :
         <>
         <header>Research Link</header>
         <main>

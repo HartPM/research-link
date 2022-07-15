@@ -12,7 +12,7 @@ function ParticipantViews({user, onLogout, onLogin}) {
 
   return (
     <BrowserRouter>
-      <body>
+
         <nav className="navbar">
           <ul className="navbar-nav">
             <li className="nav-item">
@@ -58,7 +58,7 @@ function ParticipantViews({user, onLogout, onLogin}) {
             <HomePage />
           </Route>
         </Switch>
-      </body>
+
     </BrowserRouter>
   );
 }

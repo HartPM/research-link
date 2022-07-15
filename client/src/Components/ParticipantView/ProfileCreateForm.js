@@ -21,14 +21,14 @@ function ProfileCreateForm({ user }) {
             first_name: firstName,
             last_name: lastName,
             sex: sex,
-            dob: new Date(dob),
+            dob: dob,
             city: city,
             state: state,
             email: user.username,
             user_id: user.id
           }
 
-        //   console.log(newProfile)
+          console.log(newProfile)
 
         fetch("/participants", {
             method: "POST",

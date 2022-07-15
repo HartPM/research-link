@@ -27,7 +27,6 @@ function SurveyCard({ questions, surveyId, user}) {
         )
     })
 
-
     function handleSubmit(e) {
         e.preventDefault()
         let newResponse = {

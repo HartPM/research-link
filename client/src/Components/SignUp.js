@@ -37,6 +37,7 @@ function SignUp({ onLogin }){
     return (
         <>
         {
+            access & admin ? <Redirect to='/organization' /> : 
             access ? <Redirect to='/participant/profile/new' /> :
         <>
         <header>Research Link</header>
