@@ -18,16 +18,19 @@ function App() {
         .then(data => setUser(data))
       } else {
         r.json()
-        .then(errors => console.log(errors))
+        // .then(errors => console.log(errors))
       }
     })
   }, []);
+
+  function onLogin(newUser) {
+    setUser(newUser)
+  }
 
   function onLogout () {
     fetch("/logout", {
       method: "DELETE"
     })
-    .then(r => console.log(r))
     setUser(null)
   }
 
@@ -38,7 +41,7 @@ function App() {
   } else {
     return (
       <BrowserRouter>
-        <body>
+        
           <nav className="navbar">
             <ul className="navbar-nav">
                 <li className="nav-item">
@@ -73,7 +76,7 @@ function App() {
               <HomePage />
             </Route>
           </Switch>
-        </body>
+        
       </BrowserRouter>
     )
   }

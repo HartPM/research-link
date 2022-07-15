@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { useState } from 'react';
 
 function SignIn({ onLogin }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState('');
+    const [toggleIn, setToggleIn] = useState(false);
+    const [admin, setAdmin] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -18,7 +20,7 @@ function SignIn({ onLogin }) {
             .then(res => {
                 if (res.ok) {
                     res.json()
-                    .then((user) => onLogin(user))
+                    .then((user) => setAdmin(user.admin) & setToggleIn(!toggleIn) & onLogin(user))
                 } else {
                     res.json()
                     .then(obj => setErrors(obj.error))
@@ -27,6 +29,10 @@ function SignIn({ onLogin }) {
     }
 
     return (
+        <>
+        { 
+        admin ? <Redirect to='/organization/' /> :
+        toggleIn ? <Redirect to='/participant/'/> :
         <>
         <header>Research Link</header>
         <main>
@@ -63,6 +69,8 @@ function SignIn({ onLogin }) {
                 </Link>
             </div>
         </main>
+        </>
+        }
         </>
     )
 }

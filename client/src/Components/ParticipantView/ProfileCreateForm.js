@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 
 
 function ProfileCreateForm({ user }) {
@@ -10,31 +11,37 @@ function ProfileCreateForm({ user }) {
     const [state, setState] = useState('');
 
     const [errors, setErrors] = useState('');
+    const [toggleForm, setToggleForm] = useState(true);
 
 
     function handleSubmit(e) {
         e.preventDefault();
+
+        let newProfile = {
+            first_name: firstName,
+            last_name: lastName,
+            sex: sex,
+            dob: dob,
+            city: city,
+            state: state,
+            email: user.username,
+            user_id: user.id
+          }
+
+          console.log(newProfile)
 
         fetch("/participants", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-              first_name: firstName,
-              last_name: lastName,
-              sex: sex,
-              dob: dob,
-              city: city,
-              state: state,
-              email: user.username,
-              user_id: user.id
-            })
+            body: JSON.stringify()
           })
           .then(res => {
             if (res.ok) {
-                res.json()
-                .then(data => console.log(data))
+                // res.json()
+                // .then(data => console.log(data))
+                setToggleForm(!toggleForm)
             } else {
                 res.json()
                 .then( e => setErrors(Object.entries(e.error).flat()))
@@ -43,6 +50,8 @@ function ProfileCreateForm({ user }) {
     }
     
     return (
+        <>
+        { toggleForm ?
         <>
         <header>Create a profile</header>
         <main>
@@ -113,9 +122,11 @@ function ProfileCreateForm({ user }) {
                 </div>
                 <button type="submit">Create Profile</button>
             </form>
-            </div>
             { errors ? <p>Incorrect email or password</p> : null }
+            </div>
         </main>
+        </> : <Redirect to="/participant/profile" />
+        }
         </>
     )
 }

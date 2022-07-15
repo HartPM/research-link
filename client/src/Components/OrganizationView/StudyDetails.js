@@ -82,26 +82,27 @@ function StudyDetails() {
         <>
         <header>{trial.title}</header>
         <main>
-            <Link to={`/organization/studies/${trialId}/edit`}> 
-                <button>
-                    Edit Study
+            <div className="tools">
+                <Link to={`/organization/studies/${trialId}/edit`}> 
+                    <button>
+                        Edit Study
+                    </button>
+                </Link>
+                <br/>
+                <button onClick={handleDelete}>
+                    Delete Study
                 </button>
-            </Link>
-            <br/>
-            <button onClick={handleDelete}>
-                Delete Study
-            </button>
-            <Link to={{
-                pathname: '/organization/surveys/new',
-                state: { fromStudyDetails: true, trial: trialId },
-                }} > 
-                <button>
-                    Create a Survey
-                </button>
-            </Link>
-            <br/>
+                <Link to={{
+                    pathname: '/organization/surveys/new',
+                    state: { fromStudyDetails: true, trial: trialId },
+                    }} > 
+                    <button>
+                        Create a Survey
+                    </button>
+                </Link>
+            </div>
 
-            <div>
+            <div className="content2">
                 <h2>Study Information</h2>
                 <h5>Location: {trial.city}, {trial.state}</h5>
                 <p>{trial.description}</p>

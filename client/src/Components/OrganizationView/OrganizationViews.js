@@ -16,7 +16,7 @@ function OrganizationViews({user, onLogout}) {
 
     return (
         <BrowserRouter>
-            <body>
+            
                 <nav className="navbar">
                     <ul className="navbar-nav">
                         <li className="nav-item">
@@ -70,11 +70,11 @@ function OrganizationViews({user, onLogout}) {
                     <Route path='/organization/registry'>
                         <Registry />
                     </Route>
-                    <Route path='/organization'>
+                    <Route path='/organization/'>
                         <HomePage />
                     </Route>
                 </Switch>
-            </body>
+            
         </BrowserRouter>
     )
 }
