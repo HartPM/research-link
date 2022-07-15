@@ -8,7 +8,7 @@ import StudyDetails from './StudyDetails';
 import Survey from './Survey';
 import HomePage from '../HomePage';
 
-function ParticipantViews({user, onLogout}) {  
+function ParticipantViews({user, onLogout, onLogin}) {  
 
   return (
     <BrowserRouter>
@@ -43,7 +43,7 @@ function ParticipantViews({user, onLogout}) {
             <Profile user={user} /> 
           </Route>
           <Route exact path='/participant/profile/new'>
-            <ProfileCreateForm user={user} />
+            <ProfileCreateForm user={user} onLogin={onLogin}/>
           </Route>
           <Route exact path='/participant/studies'>
             <Studies />

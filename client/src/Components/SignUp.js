@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { useState } from 'react';
 
 function SignUp({ onLogin }){
@@ -6,6 +6,7 @@ function SignUp({ onLogin }){
     const [password, setPassword] = useState('');
     const [admin, setAdmin] = useState(false);
     const [errors, setErrors] = useState('');
+    const [access, setAccess] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -25,6 +26,7 @@ function SignUp({ onLogin }){
             if (res.ok) {
                 res.json()
                 .then((user) => onLogin(user))
+                setAccess(!access)
             } else {
                 res.json()
                 .then( e => setErrors(Object.entries(e.error).flat()))
@@ -33,6 +35,9 @@ function SignUp({ onLogin }){
     }
 
     return (
+        <>
+        {
+            access ? <Redirect to='/participant/profile/new' /> :
         <>
         <header>Research Link</header>
         <main>
@@ -86,6 +91,8 @@ function SignUp({ onLogin }){
                 </Link>
             </div>
         </main>
+        </>
+        }
         </>
     )
 }

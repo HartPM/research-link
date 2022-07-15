@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { useState } from 'react';
 
 function SignIn({ onLogin }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState('');
+    const [toggleIn, setToggleIn] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -19,6 +20,7 @@ function SignIn({ onLogin }) {
                 if (res.ok) {
                     res.json()
                     .then((user) => onLogin(user))
+                    setToggleIn(!toggleIn)
                 } else {
                     res.json()
                     .then(obj => setErrors(obj.error))
@@ -27,6 +29,11 @@ function SignIn({ onLogin }) {
     }
 
     return (
+        <>
+        { 
+        toggleIn ? 
+        <Redirect to='/participant'/> 
+        :
         <>
         <header>Research Link</header>
         <main>
@@ -63,6 +70,8 @@ function SignIn({ onLogin }) {
                 </Link>
             </div>
         </main>
+        </>
+        }
         </>
     )
 }

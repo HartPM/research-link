@@ -23,6 +23,10 @@ function App() {
     })
   }, []);
 
+  function onLogin(newUser) {
+    setUser(newUser)
+  }
+
   function onLogout () {
     fetch("/logout", {
       method: "DELETE"
