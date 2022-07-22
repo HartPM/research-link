@@ -34,7 +34,9 @@ function SignIn({ onLogin }) {
         admin ? <Redirect to='/organization/' /> :
         toggleIn ? <Redirect to='/participant/'/> :
         <>
-        <header>Research Link</header>
+        <header>
+            Research Link
+        </header>
         <main>
             <div className="content2">
                 <form onSubmit={handleSubmit}>
