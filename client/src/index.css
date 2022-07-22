@@ -44,6 +44,13 @@ header {
   padding: 0.7rem;
   background: linear-gradient(#0A58BF ,#687DA6);
   border-radius: 1px;
+  display: float;
+}
+
+.logo {
+  width: 3.5rem;
+  float: left;
+  padding: .8rem;
 }
 
 button {
