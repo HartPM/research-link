@@ -10,6 +10,10 @@ Requirements
 	Ruby 2.7.4
 	NodeJS (v16) and npm
 	Postgresql
+	
+	
+	
+Environment Setup
 
 Install the Latest Ruby Version
 
@@ -86,3 +90,26 @@ Postgresql Installation for OSX
 	Once Postgres has been installed, run this command to start the Postgres service:
 
 		$ brew services start postgresql
+		
+		
+
+Application Setup
+
+	1. cd into the directory you would like to install the app on
+	
+	2. copy the SSH link from the green code button at the top of this repository
+	
+		$ git clone <paste SSH here>
+	
+	3. cd into the new directory you just cloned
+	
+	4. Start the Rails app
+	
+		$ rails s
+	
+	5. Open a new terminal to start the React app
+	
+		$ npm start --prefix client
+	
+	
+
